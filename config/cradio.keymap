@@ -21,7 +21,7 @@
         compatible = "zmk,combos";
         combo_ESC {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
     };
@@ -62,7 +62,7 @@
 			left_layer {
 				bindings = <
 				&kp ESC   &kp EXCL   &kp AT     &kp HASH   &kp DLLR		              &kp STAR          &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
-				&kp TAB   &kp QMARK  &kp CARET  &kp GRAVE  &kp AMPS 		          &kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &trans
+				&kp TAB   &kp QMARK  &kp CARET  &kp GRAVE  &kp AMPS 		          &kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &kp SEMI
 				&kp CAPS  &kp APOS   &kp BSLH   &kp PIPE   &kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &to 3
 												&to 0      &mt LALT BSPC              &mt RSHIFT ENTER  &to 2
 				>;
