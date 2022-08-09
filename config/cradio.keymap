@@ -53,8 +53,8 @@
 			default_layer {
 				bindings = <
 				&kp Q  &kp W        &kp E       &kp R           &kp T					 &kp Y              &kp U       &kp I          &kp O        &kp P 
-				&kp A  &hm LCTRL S  &hm LALT D  &hm LGUI F      &kp G 			         &kp H              &hm RGUI J  &hm RALT K     &hm RCTRL L  &td SQT DQT
-				&kp Z  &kp X        &kp C       &kp V           &kp B				     &kp N              &kp M       &td COMMA DOT  &kp SLASH    &td LT GT
+				&kp A  &hm LCTRL S  &hm LALT D  &hm LGUI F      &kp G 			         &kp H              &hm RGUI J  &hm RALT K     &hm RCTRL L  &mt FSLH SEMI
+				&kp Z  &kp X        &kp C       &kp V           &kp B				     &kp N              &kp M       &td COMMA DOT  &td SQT DQT  &td LT GT
 												&mt LGUI SPACE  &mt LALT BSPC        	 &mt RSHIFT ENTER   &to 1
 				>;
 				};
@@ -62,7 +62,7 @@
 			left_layer {
 				bindings = <
 				&kp ESC   &kp EXCL   &kp AT     &kp HASH   &kp DLLR		              &kp STAR          &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
-				&kp TAB   &kp QMARK  &kp CARET  &kp GRAVE  &kp AMPS 		          &kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &kp SEMI
+				&kp TAB   &kp QMARK  &kp CARET  &kp GRAVE  &kp AMPS 		          &kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &trans
 				&kp CAPS  &kp APOS   &kp BSLH   &kp PIPE   &kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &to 3
 												&to 0      &mt LALT BSPC              &mt RSHIFT ENTER  &to 2
 				>;
