@@ -79,10 +79,18 @@
 
 			tri_layer {
 				bindings = <
-				&trans  &kp F9  &kp F10     &kp F11  &kp F12    			     &kp C_MUTE        &kp C_BRI_AUTO  &trans  &trans  &trans
+				&trans  &kp F9  &kp F10     &kp F11  &kp F12    			     &kp C_MUTE        &kp C_BRI_AUTO  &trans  &trans  &to 4
 				&trans  &kp F5  &kp F6      &kp F7   &kp F8 			         &kp C_VOL_UP      &kp C_BRI_UP    &trans  &trans  &trans
 				&trans  &kp F1  &kp F2      &kp F3   &kp F4 			         &kp C_VOL_DN    &kp C_BRI_DN    &trans  &trans  &trans
 											&to 0    &mt LALT BSPC         		 &mt RSHIFT ENTER  &trans
+				>;
+				};
+			dvorak_layer {
+				bindings = <
+				&td COMMA DOT  &mt FSLH SEMI  &td LT GT     &kp P           &kp Y					 &kp F              &kp G       &kp C          &kp R        &kp L 
+				&kp A          &kp O          &hm LALT E    &hm LGUI U      &hm LSHIFT I 			 &hm RSHIFT H       &hm RGUI D  &hm RALT H     &hm RCTRL T  &kp S
+				&td SQT DQT    &kp Q          &kp J         &kp K           &kp X				     &kp B              &kp M       &kp W          &kp V        &kp Z        
+                                                            &mt LGUI SPACE  &mt LALT BSPC        	 &mt RSHIFT ENTER   &to 1
 				>;
 				};
 	};
