@@ -88,7 +88,7 @@
 			dvorak_layer {
 				bindings = <
 				&td COMMA DOT  &mt FSLH SEMI  &td LT GT     &kp P           &kp Y					 &kp F              &kp G       &kp C          &kp R        &kp L 
-				&kp A          &kp O          &hm LALT E    &hm LGUI U      &hm LSHIFT I 			 &hm RSHIFT H       &hm RGUI D  &hm RALT H     &hm RCTRL T  &kp S
+				&kp A          &kp O          &hm LALT E    &hm LGUI U      &hm LSHIFT I 			 &hm RSHIFT D       &hm RGUI H  &hm RALT T     &hm RCTRL N  &kp S
 				&td SQT DQT    &kp Q          &kp J         &kp K           &kp X				     &kp B              &kp M       &kp W          &kp V        &kp Z        
                                                             &mt LGUI SPACE  &mt LALT BSPC        	 &mt RSHIFT ENTER   &to 0
 				>;
