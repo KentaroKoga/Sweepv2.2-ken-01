@@ -18,47 +18,72 @@
 
 / {
     combos {
-        compatible = "zmk,combos";
-        combo_ESC {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-		combo_BSPC {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp BSPC>;
-        };
-		combo_ENTER {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp ENTER>;
-        };
+      compatible = "zmk,combos";
+			combo_ESC {
+				timeout-ms = <50>;
+				key-positions = <0 1>;
+				bindings = <&kp ESC>;
+			};
+			combo_BSPC {
+				timeout-ms = <50>;
+				key-positions = <2 3>;
+				bindings = <&kp BSPC>;
+			};
+			combo_ENTER {
+				timeout-ms = <50>;
+				key-positions = <12 13>;
+				bindings = <&kp ENTER>;
+			};
+			combo_COPY {
+				timeout-ms = <50>;
+				key-positions = <11 12>;
+				bindings = <&kp LG(C)>;
+			};
+			combo_PASTE {
+				timeout-ms = <50>;
+				key-positions = <1 2>;
+				bindings = <&kp LG(V)>;
+			};
+			combo_SAVE {
+				timeout-ms = <50>;
+				key-positions = <10 11>;
+				bindings = <&kp LG(S)>;
+			};
+			combo_UNDO {
+				timeout-ms = <50>;
+				key-positions = <13 14>;
+				bindings = <&kp LG(Z)>;
+			};
+			combo_REDO {
+				timeout-ms = <50>;
+				key-positions = <3 4>;
+				bindings = <&kp LG(LS(Z))>;
+			};
     };
 
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-		td: tapdance {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
+			hm: homerow_mods {
+				compatible = "zmk,behavior-hold-tap";
+				label = "HOMEROW_MODS";
+				#binding-cells = <2>;
+				tapping-term-ms = <200>;
+				quick_tap_ms = <0>;
+				flavor = "tap-preferred";
+				bindings = <&kp>, <&kp>;
+			};
+			td: tapdance {
+				compatible = "zmk,behavior-hold-tap";
+				label = "TAPDANCE";
+				#binding-cells = <2>;
+				tapping-term-ms = <150>;
+				quick_tap_ms = <0>;
+				flavor = "tap-preferred";
+				bindings = <&kp>, <&kp>;
+      };
     };
 
-        keymap {
-            compatible = "zmk,keymap";
+  keymap {
+      compatible = "zmk,keymap";
                 
 			alphabet_layer {
 				bindings = <
@@ -73,26 +98,17 @@
 				bindings = <
 				&kp ESC   &kp EXCL   &kp AT     &kp HASH   &kp DLLR		              &kp STAR          &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
 				&kp TAB   &kp QMARK  &kp CARET  &kp GRAVE  &kp AMPS 		          &kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &to 3
-				&kp CAPS  &kp APOS   &kp BSLH   &kp PIPE   &kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &trans
+				&kp CAPS  &kp APOS   &kp BSLH   &kp PIPE   &kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &to 4
 												&to 0      &to 2                      &mt RSHIFT ENTER  &mt RALT BSPC
 				>;
 				};
 		
 			number_layer {
 				bindings = <
-				&kp K_UNDO   &kp K_REDO       &kp LG(LS(N3))  &kp LG(LS(N4))  &kp LG(LS(N5))    &kp N7  &kp N8  &kp N9  &kp N0     &kp DOT
-				&kp K_COPY   &kp K_PASTE      &kp PG_UP       &kp UP          &kp PG_DN 		  &kp N4  &kp N5  &kp N6  &kp STAR   &kp SLASH
-				&kp K_CUT    &mt LSHIFT ENTER    &kp LEFT        &kp DOWN        &kp RIGHT    	  &kp N1  &kp N2  &kp N3  &kp MINUS  &kp PLUS
+				&kp LG(Z)   &kp LG(LS(Z))       &kp LG(LS(N3))  &kp LG(LS(N4))  &kp LG(LS(N5))    &kp N7  &kp N8  &kp N9  &kp N0     &kp DOT
+				&kp LG(C)   &mt LGUI SPACE      &kp PG_UP       &kp UP          &kp PG_DN 		  &kp N4  &kp N5  &kp N6  &kp STAR   &kp SLASH
+				&kp LG(V)    &mt LSHIFT ENTER    &kp LEFT        &kp DOWN        &kp RIGHT    	  &kp N1  &kp N2  &kp N3  &kp MINUS  &kp PLUS
 													&to 0           &to 3        	&mt RSHIFT ENTER  &mt RALT BSPC
-				>;
-				};
-
-			control_layer {
-				bindings = <
-				&trans   &kp G      &trans      &trans			&trans				&trans			&kp U	&kp I		&trans		&trans
-				&trans   &kp X      &kp LGUI    &kp LALT        &kp H 				&kp H			&kp J	&kp K		&kp L		&trans
-				&trans   &kp C      &trans      &trans          &trans    	  		&trans			&kp M	&kp COMMA  	&kp PERIOD	&kp V
-									&to 0		&to 4        	&mt RSHIFT ENTER	&mt RALT BSPC
 				>;
 				};
 
@@ -105,6 +121,15 @@
 				>;
 				};
 
+			control_layer {
+				bindings = <
+				&trans   &kp G      &trans      &trans			&trans				&trans			&kp U	&kp I		&trans		&trans
+				&trans   &kp X      &kp LGUI    &kp LALT        &kp H 				&kp H			&kp J	&kp K		&kp L		&trans
+				&trans   &kp C      &trans      &trans          &trans    	  		&trans			&kp M	&kp COMMA  	&kp PERIOD	&kp V
+									&to 0		&to 4        	&mt RSHIFT ENTER	&mt RALT BSPC
+				>;
+				};
+
 			qwerty_layer {
 				bindings = <
 				&kp Q  &kp W        &kp E       &kp R           &kp T					 &kp Y              &kp U       &kp I          &kp O        &kp P 
@@ -113,5 +138,5 @@
 												&mt LGUI SPACE  &to 0                    &mt RSHIFT ENTER   &mt RALT BSPC
 				>;
 				};
-	};
+		};
 };
