@@ -59,6 +59,16 @@
 				key-positions = <3 4>;
 				bindings = <&kp LG(LS(Z))>;
 			};
+			combo_CONT {
+				timeout-ms = <50>;
+				key-positions = <1 2 3>;
+				bindings = <&to 4>;
+			};
+			combo_WARPX {
+				timeout-ms = <50>;
+				key-positions = <11 12 13>;
+				bindings = <&kp LALT(LG(X))>;
+			};
     };
 
     behaviors {
