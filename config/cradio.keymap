@@ -61,13 +61,8 @@
 			};
 			combo_CONT {
 				timeout-ms = <50>;
-				key-positions = <16 17>;
+				key-positions = <22 23>;
 				bindings = <&to 4>;
-			};
-			combo_WARPX {
-				timeout-ms = <50>;
-				key-positions = <17 18>;
-				bindings = <&kp LALT(LG(X))>;
 			};
     };
 
