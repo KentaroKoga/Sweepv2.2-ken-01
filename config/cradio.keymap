@@ -75,7 +75,7 @@
 			combo_LMODE {
 				timeout-ms = <50>;
 				key-positions = <11 12 13>;
-				bindings = <&to 5>;
+				bindings = <&to 4>;
 			};
     };
 
