@@ -159,10 +159,10 @@
 				
 			LefthandSecond {
 				bindings = <
-				&kp L              &kp R       &kp C          &kp G        &kp F     &trans  &trans  &trans  &trans  &trans
-				&hm S       &hm RCTRL N  &hm RALT T     &hm RGUI H  &kp RSHIFT D     &trans  &trans  &trans  &trans  &trans
-				&kp Z              &kp V       &kp W          &kp M        &kp B     &trans  &trans  &trans  &trans  &trans
-                                                      &trans       &trans    &trans  &trans
+				&kp L        &kp R       &kp C       &kp G       &kp F     &trans  &trans  &trans  &trans  &trans
+				&kp S        &kp N       &kp T       &kp H       &kp D     &trans  &trans  &trans  &trans  &trans
+				&kp Z        &kp V       &kp W       &kp M       &kp B     &trans  &trans  &trans  &trans  &trans
+                                            &trans       &trans    &trans  &trans
 				>;
 				};
 		};
