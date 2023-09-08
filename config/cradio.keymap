@@ -114,9 +114,9 @@
 
 			Code {
 				bindings =
-				&kp ESC   &kp EXCL   &kp AT     &kp HASH   &kp DLLR		              &kp STAR          &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
-				&kp GRAVE   &kp QMARK  &mt LGUI CARET  &kp TAB  &kp AMPS 		          &kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &to 3
-				&kp CAPS  &kp APOS   &kp BSLH   &kp PIPE   &kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &to 4
+				&kp ESC   	&kp EXCL   &kp AT     			&kp HASH   	&kp DLLR		            &kp STAR          &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
+				&kp GRAVE   &kp QMARK  &hm LGUI CARET  	&kp TAB  		&kp AMPS 		          	&kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &to 3
+				&kp CAPS  	&kp APOS   &kp BSLH   			&kp PIPE   	&kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &to 4
 												&to 0      &to 2                      &mt RSHIFT ENTER  &mt RALT BSPC
 				>;
 				};
