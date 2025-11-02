@@ -104,7 +104,7 @@
 
         Alphabet {
             bindings = <
-                &td COMMA DOT  &mt FSLH SEMI  &kp COMMA  &kp PERIOD  &kp P  &kp Y  &kp F  &kp G  &kp C  &kp R  &kp L
+                &td COMMA DOT  &mt FSLH SEMI  &td LT GT  &kp P  &kp Y  &kp F  &kp G  &kp C  &kp R  &kp L
                 &kp A  &kp O  &hm LALT E  &hm LCTRL U  &hm LSHIFT I  &hm RSHIFT D  &hm RGUI H  &hm RALT T  &hm RCTRL N  &kp S
                 &td SQT DQT  &kp Q  &kp J  &kp K  &kp X  &kp B  &kp M  &kp W  &kp V  &kp Z
                 &mt LGUI SPACE  &to 1  &mt RSHIFT ENTER  &mt RALT BSPC
@@ -140,7 +140,7 @@
 
         LefthandFirst {
             bindings = <
-                &td COMMA DOT  &mt FSLH SEMI  &kp COMMA  &kp PERIOD  &kp P  &kp Y  &trans  &trans  &trans  &trans  &trans
+                &td COMMA DOT  &mt FSLH SEMI  &td LT GT  &kp P  &kp Y  &trans  &trans  &trans  &trans  &trans
                 &kp A  &kp O  &hm LALT E  &hm LCTRL U  &hm LSHIFT I  &trans  &trans  &trans  &trans  &trans
                 &td SQT DQT  &kp Q  &kp J  &kp K  &kp X  &trans  &trans  &trans  &trans  &trans
                 &kp SPACE  &to 0  &trans  &trans
