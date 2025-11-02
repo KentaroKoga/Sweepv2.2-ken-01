@@ -17,7 +17,6 @@
 #define LefthandSecond  5
 
 
-
 &mt {
     flavor = "tap-preferred";
     tapping_term_ms = <200>;
@@ -26,144 +25,135 @@
 
 / {
     combos {
-      compatible = "zmk,combos";
-			combo_ESC {
-				timeout-ms = <50>;
-				key-positions = <0 1>;
-				bindings = <&kp ESC>;
-			};
-			combo_BSPC {
-				timeout-ms = <50>;
-				key-positions = <2 3>;
-				bindings = <&kp BSPC>;
-			};
-			combo_ENTER {
-				timeout-ms = <50>;
-				key-positions = <12 13>;
-				bindings = <&kp ENTER>;
-			};
-			combo_COPY {
-				timeout-ms = <50>;
-				key-positions = <11 12>;
-				bindings = <&kp LG(C)>;
-			};
-			combo_PASTE {
-				timeout-ms = <50>;
-				key-positions = <1 2>;
-				bindings = <&kp LG(V)>;
-			};
-			combo_SAVE {
-				timeout-ms = <50>;
-				key-positions = <10 11>;
-				bindings = <&kp LG(S)>;
-			};
-			combo_UNDO {
-				timeout-ms = <50>;
-				key-positions = <13 14>;
-				bindings = <&kp LG(Z)>;
-			};
-			combo_REDO {
-				timeout-ms = <50>;
-				key-positions = <3 4>;
-				bindings = <&kp LG(LS(Z))>;
-			};
-			combo_CONT {
-				timeout-ms = <50>;
-				key-positions = <22 23>;
-				bindings = <&kp LG(LA(X))>;
-			};
-			combo_LMODE {
-				timeout-ms = <50>;
-				key-positions = <11 12 13>;
-				bindings = <&to 4>;
-			};
+        compatible = "zmk,combos";
+        combo_ESC {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_BSPC {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp BSPC>;
+        };
+        combo_ENTER {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp ENTER>;
+        };
+        combo_COPY {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LG(C)>;
+        };
+        combo_PASTE {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp LG(V)>;
+        };
+        combo_SAVE {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp LG(S)>;
+        };
+        combo_UNDO {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp LG(Z)>;
+        };
+        combo_REDO {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp LG(LS(Z))>;
+        };
+        combo_CONT {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LG(LA(X))>;
+        };
+        combo_LMODE {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            bindings = <&to 4>;
+        };
     };
 
     behaviors {
-			hm: homerow_mods {
-				compatible = "zmk,behavior-hold-tap";
-				label = "HOMEROW_MODS";
-				#binding-cells = <2>;
-				tapping-term-ms = <200>;
-				quick_tap_ms = <0>;
-				flavor = "tap-preferred";
-				bindings = <&kp>, <&kp>;
-			};
-			td: tapdance {
-				compatible = "zmk,behavior-hold-tap";
-				label = "TAPDANCE";
-				#binding-cells = <2>;
-				tapping-term-ms = <150>;
-				quick_tap_ms = <0>;
-				flavor = "tap-preferred";
-				bindings = <&kp>, <&kp>;
-			};
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
-  keymap {
-      compatible = "zmk,keymap";
-                
-			Alphabet {
-				bindings = <
-				&td COMMA DOT  &mt FSLH SEMI  &td LT GT     &kp P           &kp Y					 &kp F              &kp G       &kp C          &kp R        &kp L 
-				&kp A          &kp O          &hm LALT E    &hm LCTRL U     &hm LSHIFT I 			 &hm RSHIFT D       &hm RGUI H  &hm RALT T     &hm RCTRL N  &kp S
-				&td SQT DQT    &kp Q          &kp J         &kp K           &kp X				     &kp B              &kp M       &kp W          &kp V        &kp Z        
-                                                            &mt LGUI SPACE  &to 1                 	 &mt RSHIFT ENTER   &mt RALT BSPC
-				>;
-				};
+    keymap {
+        compatible = "zmk,keymap";
 
-			Code {
-				bindings = <
-				&kp ESC   	&kp EXCL   &kp AT     			&kp HASH   	&kp DLLR		            &kp STAR          &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
-				&kp GRAVE   &kp QMARK  &hm LGUI CARET  	&kp TAB  		&kp AMPS 		          	&kp MINUS         &kp PLUS   &kp LPAR  &kp RPAR  &to 3
-				&kp CAPS  	&kp APOS   &kp BSLH   			&kp PIPE   	&kp TILDE 		          &kp UNDER         &kp EQUAL  &kp LBRC  &kp RBRC  &to 4
-												&to 0      &to 2                      &mt RSHIFT ENTER  &mt RALT BSPC
-				>;
-				};
-		
-			Number {
-				bindings = <
-				&kp LG(Z)   &kp LG(LS(Z))       &kp LG(LS(N3))  &kp LG(LS(N4))  &kp LG(LS(N5))    &kp N7  &kp N8  &kp N9  &kp N0     &kp DOT
-				&kp LG(C)   &mt LGUI SPACE      &kp PG_UP       &kp UP          &kp PG_DN 		  &kp N4  &kp N5  &kp N6  &kp STAR   &kp SLASH
-				&kp LG(V)    &mt LSHIFT ENTER    &kp LEFT        &kp DOWN        &kp RIGHT    	  &kp N1  &kp N2  &kp N3  &kp MINUS  &kp PLUS
-													&to 0           &to 3        	&mt RSHIFT ENTER  &mt RALT BSPC
-				>;
-				};
+        Alphabet {
+            bindings = <
+                &td COMMA DOT  &mt FSLH SEMI  &kp COMMA  &kp PERIOD  &kp P  &kp Y  &kp F  &kp G  &kp C  &kp R  &kp L
+                &kp A  &kp O  &hm LALT E  &hm LCTRL U  &hm LSHIFT I  &hm RSHIFT D  &hm RGUI H  &hm RALT T  &hm RCTRL N  &kp S
+                &td SQT DQT  &kp Q  &kp J  &kp K  &kp X  &kp B  &kp M  &kp W  &kp V  &kp Z
+                &mt LGUI SPACE  &to 1  &mt RSHIFT ENTER  &mt RALT BSPC
+            >;
+        };
 
-			Device {
-				bindings = <
-				&trans  &kp F9  &kp F10     &kp F11  &kp F12    			     &kp C_MUTE        &kp C_BRI_AUTO  &bt BT_NXT  &trans  &bt BT_CLR_ALL
-				&trans  &kp F5  &kp F6      &kp F7   &kp F8 			         &kp C_VOL_UP      &kp C_BRI_UP    &bt BT_PRV  &trans  &bt BT_CLR
-				&trans  &kp F1  &kp F2      &kp F3   &kp F4 			         &kp C_VOL_DN      &kp C_BRI_DN    &trans  &trans  &trans
-											&to 0    &to 4         		     &mt RSHIFT ENTER  &mt RALT BSPC
-				>;
-				};
+        Code {
+            bindings = <
+                &kp ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp STAR  &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSPC
+                &kp GRAVE  &kp QMARK  &hm LGUI CARET  &kp TAB  &kp AMPS  &kp MINUS  &kp PLUS  &kp LPAR  &kp RPAR  &to 3
+                &kp CAPS  &kp APOS  &kp BSLH  &kp PIPE  &kp TILDE  &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &to 4
+                &to 0  &to 2  &mt RSHIFT ENTER  &mt RALT BSPC
+            >;
+        };
 
-			// control_layer {
-			// 	bindings = <
-			// 	&trans   &kp G      &trans      &trans			&trans				&trans			&kp U	&kp I		&trans		&to 5
-			// 	&trans   &kp X      &kp LGUI    &kp LALT        &kp H 				&kp H			&kp J	&kp K		&kp L		&trans
-			// 	&trans   &kp C      &trans      &trans          &trans    	  		&trans			&kp M	&kp COMMA  	&kp PERIOD	&kp V
-			// 						&to 0		&trans        	&mt RSHIFT ENTER	&mt RALT BSPC
-			// 	>;
-			// 	};
+        Number {
+            bindings = <
+                &kp LG(Z)  &kp LG(LS(Z))  &kp LG(LS(N3))  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp N7  &kp N8  &kp N9  &kp N0  &kp DOT
+                &kp LG(C)  &mt LGUI SPACE  &kp PG_UP  &kp UP  &kp PG_DN  &kp N4  &kp N5  &kp N6  &kp STAR  &kp SLASH
+                &kp LG(V)  &mt LSHIFT ENTER  &kp LEFT  &kp DOWN  &kp RIGHT  &kp N1  &kp N2  &kp N3  &kp MINUS  &kp PLUS
+                &to 0  &to 3  &mt RSHIFT ENTER  &mt RALT BSPC
+            >;
+        };
 
-			LefthandFirst {
-				bindings = <
-				&td COMMA DOT  &mt FSLH SEMI  &td LT GT     &kp P                &kp Y          &trans  &trans  &trans  &trans  &trans
-				&kp A          &kp O          &hm LALT E    &hm LCTRL U          &hm LSHIFT I   &trans  &trans  &trans  &trans  &trans
-				&td SQT DQT    &kp Q          &kp J         &kp K                &kp X          &trans  &trans  &trans  &trans  &trans    
-                                                    &mo 5        &to 0          &trans  &trans
-				>;
-				};
-				
-			LefthandSecond {
-				bindings = <
-				&kp L        &kp R       &kp C       &kp G       &kp F     &trans  &trans  &trans  &trans  &trans
-				&kp S        &kp N       &kp T       &kp H       &kp D     &trans  &trans  &trans  &trans  &trans
-				&kp Z        &kp V       &kp W       &kp M       &kp B     &trans  &trans  &trans  &trans  &trans
-                                            &trans       &trans    &trans  &trans
-				>;
-				};
-		};
+        Device {
+            bindings = <
+                &trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp C_MUTE  &kp C_BRI_AUTO  &bt BT_NXT  &trans  &bt BT_CLR_ALL
+                &trans  &kp F5  &kp F6  &kp F7  &kp F8  &kp C_VOL_UP  &kp C_BRI_UP  &bt BT_PRV  &trans  &bt BT_CLR
+                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp C_VOL_DN  &kp C_BRI_DN  &trans  &trans  &trans
+                &to 0  &to 4  &mt RSHIFT ENTER  &mt RALT BSPC
+            >;
+        };
+
+        LefthandFirst {
+            bindings = <
+                &td COMMA DOT  &mt FSLH SEMI  &kp COMMA  &kp PERIOD  &kp P  &kp Y  &trans  &trans  &trans  &trans  &trans
+                &kp A  &kp O  &hm LALT E  &hm LCTRL U  &hm LSHIFT I  &trans  &trans  &trans  &trans  &trans
+                &td SQT DQT  &kp Q  &kp J  &kp K  &kp X  &trans  &trans  &trans  &trans  &trans
+                &kp SPACE  &to 0  &trans  &trans
+            >;
+        };
+
+        LefthandSecond {
+            bindings = <
+                &kp L  &kp R  &kp C  &kp G  &kp F  &trans  &trans  &trans  &trans  &trans
+                &kp S  &kp N  &kp T  &kp H  &kp D  &trans  &trans  &trans  &trans  &trans
+                &kp Z  &kp V  &kp W  &kp M  &kp B  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans
+            >;
+        };
+    };
 };
