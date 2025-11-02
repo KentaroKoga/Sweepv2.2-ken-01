@@ -45,7 +45,7 @@ jobs:
       - name: Archive (Cradio/Sweep Left)
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-left
           path: cradio_left_nice_nano_v2.uf2
       - name: West Build (Cradio/Sweep Right)
         run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=cradio_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
@@ -57,5 +57,12 @@ jobs:
       - name: Archive (Cradio/Sweep Right)
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-right
           path: cradio_right_nice_nano_v2.uf2
+      - name: Archive (Both Firmwares)
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: |
+            cradio_left_nice_nano_v2.uf2
+            cradio_right_nice_nano_v2.uf2
