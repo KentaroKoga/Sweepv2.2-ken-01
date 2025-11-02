@@ -153,7 +153,7 @@
 				&td COMMA DOT  &mt FSLH SEMI  &td LT GT     &kp P                &kp Y          &trans  &trans  &trans  &trans  &trans
 				&kp A          &kp O          &hm LALT E    &hm LCTRL U          &hm LSHIFT I   &trans  &trans  &trans  &trans  &trans
 				&td SQT DQT    &kp Q          &kp J         &kp K                &kp X          &trans  &trans  &trans  &trans  &trans    
-                                                    &lt 5 SPACE  &to 0          &trans  &trans
+                                                    &lt 5 &kp SPACE  &to 0          &trans  &trans
 				>;
 				};
 				
